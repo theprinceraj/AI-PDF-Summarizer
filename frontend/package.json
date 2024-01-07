@@ -1,0 +1,16 @@
+{
+  "name": "pdf-summarizer-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for AI PDF Summarizer web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "pdf",
+    "summarizer"
+  ],
+  "author": "theprinceraj",
+  "license": "ISC"
+}
