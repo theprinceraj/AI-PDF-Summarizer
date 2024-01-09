@@ -1,13 +1,7 @@
-import { createWorker } from 'tesseract.js';
+import { extractTextFromImage } from "../utilities/imageToText";
 
-export async function extractTextFromImage(imageBuffer) {
-    const worker = await createWorker('eng');
-    const { data: { text } } = await worker.recognize(imageBuffer);
-    await worker.terminate();
-    console.log(text);
-    return text;
-}
-
-export async function extractTextFromPDF(pdf) {
-
+export async function textExtractionController(req, res) {
+    const base64Image = req.body.image;
+    const text = await extractTextFromImage(base64Image);
+    res.send(text);
 }
