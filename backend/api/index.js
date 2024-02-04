@@ -10,8 +10,8 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 })
 
-import textExtractRoute from '../src/routes/textExtract';
-app.use('/extract', textExtractRoute)
+import textProcessRoute from '../src/routes/textProcess.js';
+app.use('/process', textProcessRoute)
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
